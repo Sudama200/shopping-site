@@ -14,7 +14,7 @@ const CartIcon = () => {
     <OutsideClickHandler
      onOutsideClick = {() => {
       if(isCartOpen){
-        setIsCartOpen(!isCartOpen)
+        setIsCartOpen(isCartOpen)
       }
      }}
     >
