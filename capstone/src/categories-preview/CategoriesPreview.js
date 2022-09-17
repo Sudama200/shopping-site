@@ -1,11 +1,12 @@
 
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import CategoryPreview from '../components/category-preview/CategoryPreview';
-import { CategoriesContext } from '../context/CategoriesContext';
+import { selectCategoriesMap } from '../reducer/categoriesToRedux/category.selector';
 import './CategoriesPreview.scss';
 
-const CategogiesPreview = () => {
-    const {categoriesMap} = useContext(CategoriesContext)
+const CategoriesPreview = () => {
+  const categoriesMap = useSelector(selectCategoriesMap);
+  console.log({categoriesMap});
   return (
     <>
     {
@@ -19,4 +20,4 @@ const CategogiesPreview = () => {
   )
 }
 
-export default CategogiesPreview;
+export default CategoriesPreview;
